@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>scanservjs-1</Name>
+  <Name>scanservjs</Name>
   <Repository>sbs20/scanservjs</Repository>
   <Registry>https://hub.docker.com/r/sbs20/scanservjs/</Registry>
   <Network>bridge</Network>
@@ -13,9 +13,8 @@
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/TheJambo/Store/main/scanservjs.png</Icon>
-  <DateInstalled>1661808328</DateInstalled>
   <Config Name="WebUI Port" Target="8080" Default="8080" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
-  <Config Name="Local / USB Scanner" Target="" Default="" Mode="" Description="Path to your Local / USB scanner.&#13;&#10;&#13;&#10;Run `lsusb` and find your scanner.&#13;&#10;&#13;&#10;E.g.: Bus 007 Device 003: ID 04a9:170c Canon, Inc. PIXMA MP500 Scanner&#13;&#10;&#13;&#10;It's the Bus 007 Device 003, so the path to is should be: /dev/bus/usb/007/003" Type="Device" Display="always" Required="false" Mask="false">/dev/bus/usb/007/003</Config>
+  <Config Name="Local / USB Scanner" Target="" Default="" Mode="" Description="Path to your Local / USB scanner.&#13;&#10;&#13;&#10;Run `lsusb` and find your scanner.&#13;&#10;&#13;&#10;E.g.: Bus 007 Device 003: ID 04a9:170c Canon, Inc. PIXMA MP500 Scanner&#13;&#10;&#13;&#10;It's the Bus 007 Device 003, so the path to is should be: /dev/bus/usb/007/003" Type="Device" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Network Scanner Address" Target="SANED_NET_HOSTS" Default="" Mode="" Description="Enter IP if using a network scanner. Leave blank if using a USB / local scanner." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Storage" Target="/app/data/output" Default="/mnt/user/appdata/scanservjs/" Mode="rw" Description="Where the scans and previews will be stored" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/scanservjs/</Config>
   <Config Name="Airscan Devices" Target="AIRSCAN_DEVICES" Default="" Mode="" Description="If your scanner is driverless over the network, then you can use this option.  Below is an example of what to use for two airscan devices:&#13;&#10;" Type="Variable" Display="advanced" Required="false" Mask="false"/>
